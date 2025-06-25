@@ -1,21 +1,65 @@
-# RCM Insights: Medicare Claims Analysis
+# RCM Insights: DE-SynPUF Beneficiary Analysis
 
-This repo explores the CMS DE-SynPUF Medicare claims dataset (2008–2010). We begin with Python-based exploratory analysis, then transition into Snowflake for scalable, production-ready data workflows.
+This project explores the **CMS 2008–2010 Data Entrepreneurs' Synthetic Public Use File (DE-SynPUF)**, focusing on the 2010 beneficiary summary data. The goal is to perform foundational data analysis that supports identifying value-driven opportunities for automation and AI within revenue cycle operations.
 
-## Structure
+---
 
-- `data/raw/synpuf_sample1`: Synthetic Medicare claims data (not included in repo)
-- `notebooks/`: Jupyter notebooks for EDA
-- `sql/`: Snowflake SQL scripts for table creation and transformation
-- `src/`: Python utility functions
+## 📁 Dataset
 
-## Current Progress
+- **Source**: [CMS DE-SynPUF](https://www.cms.gov/data-research/synthetic-public-use-file)
+- **Subset used**: 2010 Beneficiary Summary File (Sample 1)
 
-- Initial beneficiary-level EDA (demographics, age, mortality)
-- Ready to migrate structured insights to Snowflake
+---
 
-## Coming Soon
+## 🎯 Objectives
 
-- Snowflake staging and load scripts
-- Notebook-to-SQL transitions
-- Power analysis and downstream ML tasks (TBD)
+- Explore patient-level reimbursement and chronic condition patterns
+- Set up SQL data structures for Snowflake ingestion
+- Enable downstream scoring and opportunity assessment for AI-driven RCM improvements
+
+---
+
+## 🗂️ Project Structure
+
+rcm-insights/
+├── data/
+│ ├── raw/
+│ │ └── synpuf_sample1/
+├── notebooks/
+│ └── eda_synpuf_ben_summary_2010.ipynb
+├── sql/
+│ ├── 01_create_beneficiary_table.sql
+│ ├── 02_copy_into_beneficiary.sql
+│ └── 03_ai_opportunity_queries.sql
+├── requirements.txt
+└── README.md
+
+---
+
+## 📓 Notebooks
+
+### `eda_synpuf_ben_summary_2010.ipynb`
+
+Performs exploratory analysis on 2010 beneficiary data:
+
+- Distribution of total reimbursement
+- Count of chronic conditions per patient
+- Relationship between cost and condition count
+- Sample heuristic to flag potentially interesting segments
+
+---
+
+## 💾 SQL Scripts
+
+- `01_create_beneficiary_table.sql`: Creates Snowflake table for beneficiary data
+- `02_copy_into_beneficiary.sql`: Loads CSV data into Snowflake
+- `03_ai_opportunity_queries.sql`: Example queries highlighting potential segmentation and targeting
+
+---
+
+## 🛠️ Installation
+
+Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
