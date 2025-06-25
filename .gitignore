@@ -1,5 +1,2 @@
-# Snowflake creds
 .env
-
-# Models
-/models/
+data/raw/
