@@ -2,3 +2,5 @@ pandas
 matplotlib
 notebook
 snowflake-connector-python
+python-dotenv
+
