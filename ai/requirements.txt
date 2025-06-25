@@ -1,8 +1,0 @@
-pandas
-scikit-learn
-xgboost
-snowflake-connector-python
-faiss-cpu
-sentence-transformers
-langchain
-openai
